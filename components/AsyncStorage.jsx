@@ -64,6 +64,7 @@ export default function AsyncStorageApp() {
       setSaveUserData(user);
       // Alert.alert(`Data : ${user.email}`);
       setOverlay(true);
+      resetInputField();
     } else {
       Alert.alert(`User Not Found!`);
     }
@@ -174,31 +175,42 @@ export default function AsyncStorageApp() {
       </View>
 
       {/* Add User Btn */}
-      <TouchableOpacity
-        style={[
-          styles.touchableBtnContainer,
-          {
-            backgroundColor: 'darkgreen',
-          },
-        ]}
-        onPress={addUserData}
-      >
-        <Icon name="add-circle-outline" size={25} color="#fff" />
-        <Text style={styles.toucableTextBtn}>Add User.</Text>
-      </TouchableOpacity>
 
-      <TouchableOpacity
-        style={[
-          styles.touchableBtnContainer,
-          {
-            backgroundColor: 'darkblue',
-          },
-        ]}
-        onPress={getUserData}
+      <View
+        style={{
+          flexDirection: 'row',
+          gap: 10,
+          justifyContent: 'space-between',
+        }}
       >
-        <Icon name="cloud-upload-outline" size={25} color="#fff" />
-        <Text style={styles.toucableTextBtn}>Get User Data</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={[
+            styles.touchableBtnContainer,
+            {
+              backgroundColor: 'darkgreen',
+              flex: 1,
+            },
+          ]}
+          onPress={addUserData}
+        >
+          <Icon name="create-outline" size={25} color="#fff" />
+          <Text style={styles.toucableTextBtn}>Create</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={[
+            styles.touchableBtnContainer,
+            {
+              backgroundColor: 'darkblue',
+              flex: 1,
+            },
+          ]}
+          onPress={getUserData}
+        >
+          <Icon name="search-outline" size={25} color="#fff" />
+          <Text style={styles.toucableTextBtn}>Search</Text>
+        </TouchableOpacity>
+      </View>
 
       <TouchableOpacity
         style={[
@@ -209,8 +221,8 @@ export default function AsyncStorageApp() {
         ]}
         onPress={removeUserData}
       >
-        <Icon name="person-remove-outline" size={25} color="#fff" />
-        <Text style={styles.toucableTextBtn}>🗑️ Remove User Data</Text>
+        <Icon name="trash-outline" size={25} color="#fff" />
+        <Text style={styles.toucableTextBtn}>Delete</Text>
       </TouchableOpacity>
     </View>
   );
@@ -224,7 +236,7 @@ const styles = StyleSheet.create({
     // marginHorizontal: 20,
     // marginTop: 10,
     padding: 20,
-    backgroundColor: 'transparent',
+    // backgroundColor: 'transparent',
   },
   signHeading: {
     fontSize: 25,
@@ -245,7 +257,7 @@ const styles = StyleSheet.create({
   touchableBtnContainer: {
     // backgroundColor: '#8533ff',
 
-    padding: 18,
+    padding: 15,
     borderRadius: 5,
     marginBottom: 10,
     flexDirection: 'row',
