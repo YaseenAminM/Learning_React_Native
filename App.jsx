@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import React, { useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
@@ -26,8 +27,6 @@ export default function App() {
 
   // Function to add user data
   async function addUserData() {
-    console.log('Save Btn was pressed');
-
     const findUser = await AsyncStorage.getItem(String(username));
 
     if (findUser) {
@@ -71,8 +70,17 @@ export default function App() {
 
   // Function to remove the user
   async function removeUserData() {
-    await AsyncStorage.removeItem('username');
+    const findUser = await AsyncStorage.getItem(String(username));
+
+    if (!findUser) {
+      Alert.alert("Sorry User doesn't ...");
+      resetInputField();
+      return;
+    }
+
+    await AsyncStorage.removeItem(String(username));
     Alert.alert("User's data got successfully\n removed");
+    resetInputField();
   }
 
   // Reset the input field
@@ -174,7 +182,8 @@ export default function App() {
         ]}
         onPress={addUserData}
       >
-        <Text style={styles.toucableTextBtn}>✚ Add User.</Text>
+        <Icon name="add-circle-outline" size={25} color="#fff" />
+        <Text style={styles.toucableTextBtn}>Add User.</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -186,7 +195,8 @@ export default function App() {
         ]}
         onPress={getUserData}
       >
-        <Text style={styles.toucableTextBtn}>📥 Get User Data</Text>
+        <Icon name="cloud-upload-outline" size={25} color="#fff" />
+        <Text style={styles.toucableTextBtn}>Get User Data</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -198,6 +208,7 @@ export default function App() {
         ]}
         onPress={removeUserData}
       >
+        <Icon name="person-remove-outline" size={25} color="#fff" />
         <Text style={styles.toucableTextBtn}>🗑️ Remove User Data</Text>
       </TouchableOpacity>
     </View>
@@ -232,15 +243,19 @@ const styles = StyleSheet.create({
   },
   touchableBtnContainer: {
     // backgroundColor: '#8533ff',
+
     padding: 18,
     borderRadius: 5,
     marginBottom: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 10,
   },
   toucableTextBtn: {
     color: '#fff',
     fontSize: 18,
     fontWeight: '500',
-    textAlign: 'center',
   },
 
   popUpOverly: {
