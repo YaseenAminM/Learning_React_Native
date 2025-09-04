@@ -61,6 +61,7 @@ export default function App() {
     if (savedUserData) {
       const user = await JSON.parse(savedUserData); // convert back to object
       console.log('Parsed user:', user);
+      setSaveUserData(user);
       // Alert.alert(`Data : ${user.email}`);
       setOverlay(true);
     } else {
@@ -105,7 +106,7 @@ export default function App() {
               color: '#fff',
             }}
           >
-            Stored Username : {username}
+            Stored Username : {saveUserData.username}
           </Text>
           <Text
             style={{
@@ -113,7 +114,7 @@ export default function App() {
               color: '#fff',
             }}
           >
-            Stored Email : {email}
+            Stored Email : {saveUserData.email}
           </Text>
           <Text
             style={{
@@ -121,13 +122,13 @@ export default function App() {
               color: '#fff',
             }}
           >
-            Stored Password : {password}
+            Stored Password : {saveUserData.password}
           </Text>
           <TouchableOpacity
             style={{
               position: 'absolute',
               right: 40,
-              top: 20,
+              top: 30,
             }}
             onPress={() => {
               setOverlay(false);
@@ -139,7 +140,7 @@ export default function App() {
                 fontSize: 16,
               }}
             >
-              ❌
+              <Icon name="close" size={25} color="#fff" />
             </Text>
           </TouchableOpacity>
         </View>
