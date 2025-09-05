@@ -55,6 +55,11 @@ export default function AsyncStorageApp() {
 
   // Function to get user adta
   async function getUserData() {
+    if (username === '') {
+      Alert.alert(`Enter Username...`);
+      return;
+    }
+
     let savedUserData = await AsyncStorage.getItem(String(username));
 
     console.log(saveUserData);
