@@ -1,26 +1,16 @@
+/* eslint-disable react-native/no-inline-styles */
 import { View, Text, Button } from 'react-native';
 import React from 'react';
+import First from './First';
 
 const Components = () => {
   return (
     <View>
-      <Text
-        style={{
-          fontSize: 24,
-        }}
-      >
-        <Text
-          style={{
-            color: '#33A1E0',
-          }}
-        >
-          React Native
-        </Text>{' '}
-        App Developer
-      </Text>
-      <Text>
-        ----------------------------------------------------------------------------------------
-      </Text>
+      <First />
+      <First />
+      <First />
+      <First />
+
       <Text
         style={{
           fontSize: 24,
