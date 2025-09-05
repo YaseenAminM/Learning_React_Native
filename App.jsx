@@ -4,11 +4,12 @@ import AsyncStorageApp from './src/components/AsyncStorage';
 import Components from './src/components/Components';
 import JSX from './src/components/JSX';
 import ButtonComponent from './src/components/ButtonComponent';
+import UseState from './src/components/UseState';
 
 export default function App() {
   return (
     <View style={styles.appContainer}>
-      <ButtonComponent />
+      <UseState />
     </View>
   );
 }
