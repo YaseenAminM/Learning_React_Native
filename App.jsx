@@ -5,11 +5,12 @@ import Components from './src/components/Components';
 import JSX from './src/components/JSX';
 import ButtonComponent from './src/components/ButtonComponent';
 import UseState from './src/components/UseState';
+import Props from './src/components/Props';
 
 export default function App() {
   return (
     <View style={styles.appContainer}>
-      <UseState />
+      <Props />
     </View>
   );
 }
