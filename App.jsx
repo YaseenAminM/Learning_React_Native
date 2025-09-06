@@ -12,9 +12,10 @@ import UseState from './src/components/UseState';
 import Props from './src/components/Props';
 import InputComponent from './src/components/InputComponent';
 import FlatListComponent from './src/components/FlatListComponent';
+import SelectionListComponent from './src/components/SelectionListComponent';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<FlatListComponent />}</View>;
+  return <View style={styles.appContainer}>{<SelectionListComponent />}</View>;
 }
 
 const styles = StyleSheet.create({
