@@ -13,15 +13,16 @@ import Props from './src/components/Props';
 import InputComponent from './src/components/InputComponent';
 import FlatListComponent from './src/components/FlatListComponent';
 import SelectionListComponent from './src/components/SelectionListComponent';
+import LoginForm from './src/components/LoginForm';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<SelectionListComponent />}</View>;
+  return <View style={styles.appContainer}>{<LoginForm />}</View>;
 }
 
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#red',
     // alignContent: 'center',
     // justifyContent: 'center',
   },
