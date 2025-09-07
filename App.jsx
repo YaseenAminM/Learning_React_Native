@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 // Style File
 import Styling from './src/components/Styling';
+import { Dimensions } from 'react-native';
 
 // Components
 import { View, StyleSheet } from 'react-native';
@@ -18,9 +19,10 @@ import ContactListScreen from './src/screens/Contact/ContactListScreen';
 import GridScrollView from './src/components/GridScrollView';
 import ClassComponent from './src/components/ClassComponent';
 import SecondClassComponent from './src/components/SecondClassComponent';
+import UseEffectHook from './src/components/UseEffectHook';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<ClassComponent />}</View>;
+  return <View style={styles.appContainer}>{<UseEffectHook />}</View>;
 }
 
 const styles = StyleSheet.create({
