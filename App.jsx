@@ -27,9 +27,10 @@ import StyleWithButton from './src/components/StyleWithButton';
 import Loader from './src/components/Loader';
 import PressableCpmponent from './src/components/PressableCpmponent';
 import StatusBarExample from './src/components/StatusBarExample';
+import UseRefHook from './src/components/UseRefHook';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<StatusBarExample />}</View>;
+  return <View style={styles.appContainer}>{<UseRefHook />}</View>;
 }
 
 const styles = StyleSheet.create({
