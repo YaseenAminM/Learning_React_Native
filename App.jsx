@@ -15,9 +15,10 @@ import FlatListComponent from './src/components/FlatListComponent';
 import SelectionListComponent from './src/components/SelectionListComponent';
 import LoginForm from './src/components/LoginForm';
 import ContactListScreen from './src/screens/Contact/ContactListScreen';
+import GridScrollView from './src/components/GridScrollView';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<ContactListScreen />}</View>;
+  return <View style={styles.appContainer}>{<GridScrollView />}</View>;
 }
 
 const styles = StyleSheet.create({
