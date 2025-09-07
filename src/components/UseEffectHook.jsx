@@ -6,7 +6,7 @@ export default function UseEffectHook() {
   const [count, setCount] = useState(1);
   useEffect(() => {
     console.log('API Calling');
-  }, [count]);
+  }, []);
   return (
     <View>
       <Text

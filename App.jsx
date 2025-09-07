@@ -20,9 +20,10 @@ import GridScrollView from './src/components/GridScrollView';
 import ClassComponent from './src/components/ClassComponent';
 import SecondClassComponent from './src/components/SecondClassComponent';
 import UseEffectHook from './src/components/UseEffectHook';
+import UseEffectUpdatingPhase from './src/components/UseEffectUpdatingPhase';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<UseEffectHook />}</View>;
+  return <View style={styles.appContainer}>{<UseEffectUpdatingPhase />}</View>;
 }
 
 const styles = StyleSheet.create({
