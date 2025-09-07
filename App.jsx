@@ -22,9 +22,10 @@ import SecondClassComponent from './src/components/SecondClassComponent';
 import UseEffectHook from './src/components/UseEffectHook';
 import UseEffectUpdatingPhase from './src/components/UseEffectUpdatingPhase';
 import UseEffectUnmountingPhase from './src/components/UseEffectUnmountingPhase';
+import HideShowToggle from './src/components/HideShowToggle';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<UseEffectUnmountingPhase />}</View>;
+  return <View style={styles.appContainer}>{<HideShowToggle />}</View>;
 }
 
 const styles = StyleSheet.create({
