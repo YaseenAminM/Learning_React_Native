@@ -14,9 +14,10 @@ import InputComponent from './src/components/InputComponent';
 import FlatListComponent from './src/components/FlatListComponent';
 import SelectionListComponent from './src/components/SelectionListComponent';
 import LoginForm from './src/components/LoginForm';
+import ContactListScreen from './src/screens/Contact/ContactListScreen';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<LoginForm />}</View>;
+  return <View style={styles.appContainer}>{<ContactListScreen />}</View>;
 }
 
 const styles = StyleSheet.create({
