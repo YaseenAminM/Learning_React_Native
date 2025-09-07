@@ -24,9 +24,10 @@ import UseEffectUpdatingPhase from './src/components/UseEffectUpdatingPhase';
 import UseEffectUnmountingPhase from './src/components/UseEffectUnmountingPhase';
 import HideShowToggle from './src/components/HideShowToggle';
 import StyleWithButton from './src/components/StyleWithButton';
+import Loader from './src/components/Loader';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<StyleWithButton />}</View>;
+  return <View style={styles.appContainer}>{<Loader />}</View>;
 }
 
 const styles = StyleSheet.create({
