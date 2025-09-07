@@ -28,9 +28,10 @@ import Loader from './src/components/Loader';
 import PressableCpmponent from './src/components/PressableCpmponent';
 import StatusBarExample from './src/components/StatusBarExample';
 import UseRefHook from './src/components/UseRefHook';
+import ModalDialogBox from './src/components/ModalDialogBox';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<UseRefHook />}</View>;
+  return <View style={styles.appContainer}>{<ModalDialogBox />}</View>;
 }
 
 const styles = StyleSheet.create({
