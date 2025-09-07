@@ -21,9 +21,10 @@ import ClassComponent from './src/components/ClassComponent';
 import SecondClassComponent from './src/components/SecondClassComponent';
 import UseEffectHook from './src/components/UseEffectHook';
 import UseEffectUpdatingPhase from './src/components/UseEffectUpdatingPhase';
+import UseEffectUnmountingPhase from './src/components/UseEffectUnmountingPhase';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<UseEffectUpdatingPhase />}</View>;
+  return <View style={styles.appContainer}>{<UseEffectUnmountingPhase />}</View>;
 }
 
 const styles = StyleSheet.create({
