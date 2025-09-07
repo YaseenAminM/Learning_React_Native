@@ -7,13 +7,15 @@ import { Color } from 'react-native/types_generated/Libraries/Animated/AnimatedE
 export default function UseRefHook() {
   const myRef = useRef();
 
-  function handleRef() {
-    myRef.current.setNativeProps({
-      text: 'Yaseen',
-      color: '#fff',
-      backgroundColor: '#6741d9',
-    });
-  }
+  // function handleRef() {
+  //   myRef.current.setNativeProps({
+  //     text: 'Yaseen',
+  //     color: '#fff',
+  //     backgroundColor: '#6741d9',
+  //   });
+  // }
+
+  myRef.current.focus();
 
   return (
     <View
@@ -47,7 +49,8 @@ export default function UseRefHook() {
           padding: 10,
           borderRadius: 5,
         }}
-        onPress={handleRef}>
+        // onPress={handleRef}
+      >
         <Text
           style={{
             color: '#fff',
