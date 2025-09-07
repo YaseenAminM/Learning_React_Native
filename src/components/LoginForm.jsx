@@ -1,28 +1,51 @@
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function LoginForm() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  function handleLogin() {
+    console.log(`Email : ${email}`);
+    console.log(`Password : ${password}`);
+
+    setEmail('');
+    setPassword('');
+  }
   return (
     <View style={styles.loginScreenContainer}>
       <View style={styles.formContainer}>
         <Text style={styles.welcomeHeading}>Welcome!</Text>
         <View style={styles.inputFieldContainer}>
-          <TextInput style={styles.inputField} placeholder="Email" />
-          <TextInput style={styles.inputField} placeholder="Password" />
+          <TextInput
+            value={email}
+            onChangeText={setEmail}
+            style={styles.inputField}
+            placeholder="Email"
+            keyboardType="email-address"
+          />
+          <TextInput
+            value={password}
+            onChangeText={setPassword}
+            style={styles.inputField}
+            placeholder="Password"
+            secureTextEntry={true}
+          />
         </View>
-        <TouchableOpacity style={styles.btnContainer}>
-          <Text style={styles.btnText}>Login</Text>
+        <TouchableOpacity style={styles.btnContainer} activeOpacity={0.7}>
+          <Text style={styles.btnText} onPress={handleLogin}>
+            Login
+          </Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.forgetBtnContainer}>
+        <TouchableOpacity style={styles.forgetBtnContainer} activeOpacity={0.5}>
           <Text style={styles.forgetBtnText}>Forget Password?</Text>
         </TouchableOpacity>
 
         <View style={styles.socialMediaContainer}>
-          <TouchableOpacity style={styles.socialMediaLoginBtnContainer}>
+          <TouchableOpacity style={styles.socialMediaLoginBtnContainer} activeOpacity={0.7}>
             <Text style={styles.socialMediaLoginBtnText}>Google</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.socialMediaLoginBtnContainer}>
+          <TouchableOpacity style={styles.socialMediaLoginBtnContainer} activeOpacity={0.7}>
             <Text style={styles.socialMediaLoginBtnText}>Facebook</Text>
           </TouchableOpacity>
         </View>
@@ -34,7 +57,7 @@ export default function LoginForm() {
 const styles = StyleSheet.create({
   loginScreenContainer: {
     flex: 1,
-    backgroundColor: 'green',
+    backgroundColor: '#fff',
     justifyContent: 'center',
   },
 
@@ -62,8 +85,8 @@ const styles = StyleSheet.create({
   },
 
   btnContainer: {
-    backgroundColor: 'orangered',
-    padding: 12,
+    backgroundColor: '#FC3F3F',
+    padding: 16,
     alignItems: 'center',
     borderRadius: 10,
     marginBottom: 36,
@@ -76,9 +99,13 @@ const styles = StyleSheet.create({
   forgetBtnContainer: {
     alignItems: 'center',
     marginBottom: 35,
+
+    alignSelf: 'flex-start',
+    paddingHorizontal: 10,
+    marginHorizontal: 'auto',
   },
   forgetBtnText: {
-    color: 'orangered',
+    color: '#FC3F3F',
   },
 
   socialMediaContainer: {
