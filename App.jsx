@@ -25,9 +25,10 @@ import UseEffectUnmountingPhase from './src/components/UseEffectUnmountingPhase'
 import HideShowToggle from './src/components/HideShowToggle';
 import StyleWithButton from './src/components/StyleWithButton';
 import Loader from './src/components/Loader';
+import PressableCpmponent from './src/components/PressableCpmponent';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<Loader />}</View>;
+  return <View style={styles.appContainer}>{<PressableCpmponent />}</View>;
 }
 
 const styles = StyleSheet.create({
