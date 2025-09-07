@@ -26,9 +26,10 @@ import HideShowToggle from './src/components/HideShowToggle';
 import StyleWithButton from './src/components/StyleWithButton';
 import Loader from './src/components/Loader';
 import PressableCpmponent from './src/components/PressableCpmponent';
+import StatusBarExample from './src/components/StatusBarExample';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<PressableCpmponent />}</View>;
+  return <View style={styles.appContainer}>{<StatusBarExample />}</View>;
 }
 
 const styles = StyleSheet.create({
