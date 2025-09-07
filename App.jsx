@@ -16,9 +16,11 @@ import SelectionListComponent from './src/components/SelectionListComponent';
 import LoginForm from './src/components/LoginForm';
 import ContactListScreen from './src/screens/Contact/ContactListScreen';
 import GridScrollView from './src/components/GridScrollView';
+import ClassComponent from './src/components/ClassComponent';
+import SecondClassComponent from './src/components/SecondClassComponent';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<GridScrollView />}</View>;
+  return <View style={styles.appContainer}>{<ClassComponent />}</View>;
 }
 
 const styles = StyleSheet.create({
