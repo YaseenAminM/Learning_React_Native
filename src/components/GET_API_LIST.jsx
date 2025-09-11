@@ -21,7 +21,10 @@ export default function GET_API_LIST() {
     <View style={styles.Container}>
       <Text style={styles.Header}>GET API LIST OF USERS</Text>
       {myData && (
-        <ScrollView>
+        <ScrollView
+          style={{
+            backgroundColor: '#0ca678',
+          }}>
           {myData.map(data => {
             return (
               <View

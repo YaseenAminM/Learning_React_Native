@@ -36,9 +36,10 @@ import PUT_API from './src/components/PUT_API';
 import PATCH_API from './src/components/PATCH_API';
 import DELETE_API from './src/components/DELETE_API';
 import GET_API_LIST from './src/components/GET_API_LIST';
+import PlatformExample from './src/components/PlatformExample';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<GET_API_LIST />}</View>;
+  return <View style={styles.appContainer}>{<PlatformExample />}</View>;
 }
 
 const styles = StyleSheet.create({
