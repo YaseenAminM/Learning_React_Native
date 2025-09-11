@@ -32,7 +32,7 @@ import ModalDialogBox from './src/components/ModalDialogBox';
 import AlertExample from './src/components/AlertExample';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<AlertExample />}</View>;
+  return <View style={styles.appContainer}>{<LoginForm />}</View>;
 }
 
 const styles = StyleSheet.create({

@@ -1,0 +1,24 @@
+{
+  "users": [
+    { "id": 1, "name": "ali", "email": "ali@gmail.com" },
+    { "id": 2, "name": "ahmed", "email": "ahmed@gmail.com" },
+    { "id": 3, "name": "bilal", "email": "bilal@gmail.com" },
+    { "id": 4, "name": "usman", "email": "usman@gmail.com" },
+    { "id": 5, "name": "hassan", "email": "hassan@gmail.com" },
+    { "id": 6, "name": "hussain", "email": "hussain@gmail.com" },
+    { "id": 7, "name": "umer", "email": "umer@gmail.com" },
+    { "id": 8, "name": "saad", "email": "saad@gmail.com" },
+    { "id": 9, "name": "faisal", "email": "faisal@gmail.com" },
+    { "id": 10, "name": "aslam", "email": "aslam@gmail.com" },
+    { "id": 11, "name": "arslan", "email": "arslan@gmail.com" },
+    { "id": 12, "name": "junaid", "email": "junaid@gmail.com" },
+    { "id": 13, "name": "salman", "email": "salman@gmail.com" },
+    { "id": 14, "name": "zain", "email": "zain@gmail.com" },
+    { "id": 15, "name": "omer", "email": "omer@gmail.com" },
+    { "id": 16, "name": "farhan", "email": "farhan@gmail.com" },
+    { "id": 17, "name": "tahir", "email": "tahir@gmail.com" },
+    { "id": 18, "name": "yasir", "email": "yasir@gmail.com" },
+    { "id": 19, "name": "kashif", "email": "kashif@gmail.com" },
+    { "id": 20, "name": "imran", "email": "imran@gmail.com" }
+  ]
+}
