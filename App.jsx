@@ -32,9 +32,10 @@ import ModalDialogBox from './src/components/ModalDialogBox';
 import AlertExample from './src/components/AlertExample';
 import GET_API from './src/components/GET_API';
 import Post_API from './src/components/Post_API';
+import PUT_API from './src/components/PUT_API';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<Post_API />}</View>;
+  return <View style={styles.appContainer}>{<PUT_API />}</View>;
 }
 
 const styles = StyleSheet.create({
