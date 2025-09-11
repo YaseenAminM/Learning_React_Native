@@ -33,9 +33,10 @@ import AlertExample from './src/components/AlertExample';
 import GET_API from './src/components/GET_API';
 import Post_API from './src/components/Post_API';
 import PUT_API from './src/components/PUT_API';
+import PATCH_API from './src/components/PATCH_API';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<PUT_API />}</View>;
+  return <View style={styles.appContainer}>{<PATCH_API />}</View>;
 }
 
 const styles = StyleSheet.create({
