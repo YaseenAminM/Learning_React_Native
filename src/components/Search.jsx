@@ -64,7 +64,7 @@ export default function Search() {
       <View
         style={{
           backgroundColor: '#f8f9fa',
-          marginBottom: 10,
+          marginBottom: 5,
           padding: 15,
           marginHorizontal: 15,
           borderRadius: 100,
@@ -103,6 +103,7 @@ export default function Search() {
       <FlatList
         style={{
           flex: 1,
+          marginTop: 10,
           //   backgroundColor: 'red',
         }}
         data={filterContacts}
@@ -129,7 +130,8 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     paddingRight: 5,
 
-    marginVertical: 15,
+    // marginVertical: 15,
+    marginTop: 10,
     marginHorizontal: 10,
   },
   searchBar: {
