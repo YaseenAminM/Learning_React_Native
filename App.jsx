@@ -30,9 +30,10 @@ import StatusBarExample from './src/components/StatusBarExample';
 import UseRefHook from './src/components/UseRefHook';
 import ModalDialogBox from './src/components/ModalDialogBox';
 import AlertExample from './src/components/AlertExample';
+import GET_API from './src/components/GET_API';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<LoginForm />}</View>;
+  return <View style={styles.appContainer}>{<GET_API />}</View>;
 }
 
 const styles = StyleSheet.create({
