@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
   inputField: {
     padding: 15,
-    backgroundColor: '#dee2e6',
+    backgroundColor: '#e9ecef',
     borderRadius: 6,
   },
 
