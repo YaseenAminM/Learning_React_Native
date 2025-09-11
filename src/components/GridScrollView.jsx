@@ -1,11 +1,6 @@
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import React from 'react';
 
-const data = Array.from({ length: 25 }, (_, i) => ({
-  id: i + 1,
-  title: `Item ${i + 1}`,
-}));
-
 // 🎨 Random color generator
 const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
@@ -16,15 +11,22 @@ const getRandomColor = () => {
   return color;
 };
 
+// Generate data with colors
+const data = Array.from({ length: 50 }, (_, i) => ({
+  id: i + 1,
+  color: getRandomColor(),
+}));
+
 export default function GridScrollView() {
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.heading}>Grid</Text>
+      <Text style={styles.heading}>Pick Colors</Text>
       <ScrollView contentContainerStyle={styles.container}>
         {data.map(item => {
           return (
-            <View key={item.id} style={[styles.gridItem, { backgroundColor: getRandomColor() }]}>
-              <Text style={styles.gridItemText}>{item.title}</Text>
+            <View key={item.id} style={[styles.gridItem, { backgroundColor: item.color }]}>
+              {/* ✅ Show the color string instead of Item title */}
+              <Text style={styles.gridItemText}>{item.color}</Text>
             </View>
           );
         })}

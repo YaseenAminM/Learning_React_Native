@@ -37,9 +37,10 @@ import PATCH_API from './src/components/PATCH_API';
 import DELETE_API from './src/components/DELETE_API';
 import GET_API_LIST from './src/components/GET_API_LIST';
 import PlatformExample from './src/components/PlatformExample';
+import Search from './src/components/Search';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<PlatformExample />}</View>;
+  return <View style={styles.appContainer}>{<Search />}</View>;
 }
 
 const styles = StyleSheet.create({
