@@ -9,17 +9,20 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Routes / Componentes / Screens
 import Home from '../Navigation/Home';
 import About from '../Navigation/About';
+import Login from '../Navigation/Login';
 
 const Stack = createNativeStackNavigator();
 
 export default function Navigation() {
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor="#333" barStyle="light-content" />
+      <StatusBar backgroundColor="#fff" barStyle="dark-content" />
       <Stack.Navigator
         screenOptions={{
           headerShadowVisible: false, // 👈 removes shadow (Android & iOS)
+          // headerShown: false,
         }}>
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen
           name="Home"
           component={Home}

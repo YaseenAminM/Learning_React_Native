@@ -7,6 +7,7 @@ export default function Home({ navigation }) {
       <Text>Home</Text>
 
       <Button title="Go to About Screen" onPress={() => navigation.navigate('About')} />
+      <Button title="Go to back to Login Screen" onPress={() => navigation.navigate('Login')} />
     </View>
   );
 }
