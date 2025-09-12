@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet, TextInput, FlatList } from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+import { View, Text, StyleSheet, TextInput, FlatList, StatusBar } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import React, { useState } from 'react';
 

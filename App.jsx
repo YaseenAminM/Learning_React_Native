@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 // Style File
 import Styling from './src/components/Styling';
-import { Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, StatusBar } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 // Components
-import { View, StyleSheet } from 'react-native';
 import AsyncStorageApp from './src/components/AsyncStorage';
 import Components from './src/components/Components';
 import JSX from './src/components/JSX';
@@ -38,16 +38,28 @@ import DELETE_API from './src/components/DELETE_API';
 import GET_API_LIST from './src/components/GET_API_LIST';
 import PlatformExample from './src/components/PlatformExample';
 import Search from './src/components/Search';
+import Navigation from './src/components/Navigation';
 
 export default function App() {
-  return <View style={styles.appContainer}>{<Search />}</View>;
+  // return (
+  //   <SafeAreaProvider>
+  //     <SafeAreaView style={styles.appContainer}>
+  //       <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
+  //       <Text>Hello</Text>
+  //     </SafeAreaView>
+  //   </SafeAreaProvider>
+  // );
+  // ========= NAVIGATION =========
+  return (
+    <View style={styles.appContainer}>
+      <Navigation />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
-    backgroundColor: '#red',
-    // alignContent: 'center',
-    // justifyContent: 'center',
+    // backgroundColor: 'purple',
   },
 });
