@@ -40,11 +40,12 @@ import PlatformExample from './src/components/PlatformExample';
 import Search from './src/components/Search';
 import Navigation from './src/components/Navigation';
 import DrawerNavigation from './src/components/DrawerNavigation';
+import BottomTabNavigation from './src/components/BottomTabNavigation';
 
 export default function App() {
   return (
     <View style={styles.appContainer}>
-      <DrawerNavigation />
+      <BottomTabNavigation />
     </View>
   );
 }
