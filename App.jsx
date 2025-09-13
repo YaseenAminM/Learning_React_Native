@@ -39,20 +39,12 @@ import GET_API_LIST from './src/components/GET_API_LIST';
 import PlatformExample from './src/components/PlatformExample';
 import Search from './src/components/Search';
 import Navigation from './src/components/Navigation';
+import DrawerNavigation from './src/components/DrawerNavigation';
 
 export default function App() {
-  // return (
-  //   <SafeAreaProvider>
-  //     <SafeAreaView style={styles.appContainer}>
-  //       <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
-  //       <Text>Hello</Text>
-  //     </SafeAreaView>
-  //   </SafeAreaProvider>
-  // );
-  // ========= NAVIGATION =========
   return (
     <View style={styles.appContainer}>
-      <Navigation />
+      <DrawerNavigation />
     </View>
   );
 }
