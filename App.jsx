@@ -43,11 +43,13 @@ import DrawerNavigation from './src/components/DrawerNavigation';
 import BottomTabNavigation from './src/components/BottomTabNavigation';
 import CutomeBottomTabNavigtion from './src/components/CutomeBottomTabNavigtion';
 import TopTabNavigation from './src/components/TopTabNavigation';
+import ImageComponentExample from './src/components/ImageComponentExample';
+import ContextApiDemoComponent from './src/components/ContextApiDemoComponent';
 
 export default function App() {
   return (
     <View style={styles.appContainer}>
-      <TopTabNavigation />
+      <ContextApiDemoComponent />
     </View>
   );
 }
