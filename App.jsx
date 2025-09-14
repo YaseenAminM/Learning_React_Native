@@ -42,11 +42,12 @@ import Navigation from './src/components/Navigation';
 import DrawerNavigation from './src/components/DrawerNavigation';
 import BottomTabNavigation from './src/components/BottomTabNavigation';
 import CutomeBottomTabNavigtion from './src/components/CutomeBottomTabNavigtion';
+import TopTabNavigation from './src/components/TopTabNavigation';
 
 export default function App() {
   return (
     <View style={styles.appContainer}>
-      <CutomeBottomTabNavigtion />
+      <TopTabNavigation />
     </View>
   );
 }
