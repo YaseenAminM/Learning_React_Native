@@ -45,11 +45,12 @@ import CutomeBottomTabNavigtion from './src/components/CutomeBottomTabNavigtion'
 import TopTabNavigation from './src/components/TopTabNavigation';
 import ImageComponentExample from './src/components/ImageComponentExample';
 import ContextApiDemoComponent from './src/components/ContextApiDemoComponent';
+import ReduxToolKit from './src/components/ReduxToolKit';
 
 export default function App() {
   return (
     <View style={styles.appContainer}>
-      <ContextApiDemoComponent />
+      <ReduxToolKit />
     </View>
   );
 }
