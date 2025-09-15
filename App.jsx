@@ -46,11 +46,12 @@ import TopTabNavigation from './src/components/TopTabNavigation';
 import ImageComponentExample from './src/components/ImageComponentExample';
 import ContextApiDemoComponent from './src/components/ContextApiDemoComponent';
 import ReduxToolKit from './src/components/ReduxToolKit';
+import One from './src/components/One';
 
 export default function App() {
   return (
     <View style={styles.appContainer}>
-      <ReduxToolKit />
+      <One />
     </View>
   );
 }
